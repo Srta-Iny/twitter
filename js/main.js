@@ -5,8 +5,12 @@
 //guardar tarea y asignar un checkbox para dicha tarea
 
 var listaTareas = document.getElementById("tareas");
+// variables contadores
 var numTareas = document.getElementById("contador");
+var meGusta = document.getElementById("like");
 var cont = 0;
+var like = 0;
+
 function anadirTarea(){
 //rescatar texto
 	var textMensaje = document.getElementById("mensaje").value;
@@ -35,6 +39,14 @@ function anadirTarea(){
 	});
 	iconHeart.addEventListener("click", function(){
 		iconHeart.classList.toggle("rojo");
+		//suma like
+		if(iconHeart.classList.contains("rojo")){
+			like++;
+		    meGusta.innerHTML=like;
+		}else{
+			like--;
+			meGusta.innerHTML=like;
+		}
 	});
 //existe texto?
 	if(textMensaje === ""){
@@ -43,6 +55,7 @@ function anadirTarea(){
 	//sumar contador
 		cont++;
 		numTareas.innerHTML=cont;
+	//agregando tareas
 		labelTarea.appendChild(inputTarea);
 		spanTarea.appendChild(textTarea);
 		labelTarea.appendChild(spanTarea);
@@ -54,9 +67,16 @@ function anadirTarea(){
 // dejando espacio en blanco
 	textMensaje = document.getElementById("mensaje").value = "";
 }
+
 //funcion para borrar
 function eliminar(trash) {
+	// borra
+	trash.parentNode.removeChild(trash);
+	//resta contador
 	cont--;
 	numTareas.innerHTML=cont;
- 	trash.parentNode.removeChild(trash);
+	like--;
+	meGusta.innerHTML=like;
+	
+
 }

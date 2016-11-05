@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/logo.png">
 	<title>Twitter</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,7 +40,6 @@
 							</ul>
 						</li>
 					</ul>
-
 <!-- formulario busqueda -->
 					<form class="navbar-form navbar-right">
 						<div class="form-group">
@@ -55,7 +54,7 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-3">
+			<div class="col-xs-12 col-sm-12 col-md-4">
 				<div class="fondo-perfil">
 					<img src="img/perfil.jpg" alt="perfil" class="img-thumbnail foto-perfil">
 					<h4 class="nick">Gato Neko<br><small>@gatoneko</small></h4>
@@ -66,12 +65,12 @@
 						</li>
 						<li class="text-center">
 							<p>ME GUSTA</p>
-							<span>0</span>
+							<span id="like">0</span>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-9 ">
+			<div class="col-xs-12 col-sm-12 col-md-8 ">
 				<div class="form-group">
 					<label for="mensaje"></label>
 					<textarea class="form-control" id="mensaje" rows="4" placeholder="¿Alguna tarea?" required></textarea>
