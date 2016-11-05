@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Twitter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header id="cabecera" class="">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+<!-- menu responsive-->
+				<div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+<!-- logo-->		<a class="navbar-brand" href="#"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
+				</div>   
+<!-- menu desplegable -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Perfil</a></li>
+								<li><a href="#">Listas</a></li>
+								<li><a href="#">Momentos</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Ayuda</a></li>
+							</ul>
+						</li>
+					</ul>
+
+<!-- formulario busqueda -->
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Buscar...">
+						</div>
+						<button type="submit" class="btn btn-default">Buscar</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+</header>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-3">
+				<div class="fondo-perfil">
+					<img src="img/perfil.jpg" alt="perfil" class="img-thumbnail foto-perfil">
+					<h4 class="nick">Gato Neko<br><small>@gatoneko</small></h4>
+					<ul class="list-inline text-center">
+						<li class="text-center">
+							<p>TAREAS</p>
+							<span id="contador">0</span>
+						</li>
+						<li class="text-center">
+							<p>ME GUSTA</p>
+							<span>0</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-9 ">
+				<div class="form-group">
+					<label for="mensaje"></label>
+					<textarea class="form-control" id="mensaje" rows="4" placeholder="¿Alguna tarea?" required></textarea>
+					<button type="submit" class="btn btn-primary enviar" onclick="anadirTarea()" id="form-submit"><i class="fa fa-plus" aria-hidden="true"></i> ENVIAR</button>
+				</div>
+				<hr>
+				<div id="tareas">
+				<!--<div class="checkbox">
+						<label class="seleccion">
+						    <input type="checkbox" value="">
+						    <span>Option one is this and that&mdash;be sure to include why it's great</span>
+						</label>
+						<i class="fa fa-trash icon-ba" aria-hidden="true"></i>
+						<i class="fa fa-heart icon-co" aria-hidden="true"></i>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script type='text/javascript' src="js/main.js"></script>   
+</body>
+</html>
